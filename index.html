@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIV TV — DIVSTUDIO.CO LTD</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#">DIV TV</a><nav><a href="#trending">Trending</a><a href="#series">Series</a><a href="#latest">Latest</a></nav><div class="actions"><button id="searchBtn">Search</button><button id="libraryBtn">Watch later</button><button id="authBtn">Sign in</button></div></header>
+<main>
+<section class="hero"><p class="eyebrow">DIVSTUDIO.CO LTD</p><h1>Stories made to move you.</h1><p>Original animation, film and entertainment from DIVSTUDIO.</p><button id="exploreBtn">Explore DIV TV</button></section>
+<section id="trending"><div class="section-head"><h2>Trending</h2></div><div id="trendingCards" class="grid"></div></section>
+<section id="series"><div class="section-head"><h2>Series</h2></div><div id="seriesCards" class="grid"></div></section>
+<section id="latest"><div class="section-head"><h2>Latest episodes</h2></div><div id="latestCards" class="grid"></div></section>
+</main>
+<div id="toast" class="toast"></div>
+<div id="player" class="overlay hidden"><div class="player-box"><button id="closePlayer" class="close">×</button><video id="videoEl" controls playsinline></video><h2 id="playerTitle"></h2><p id="playerDescription"></p><div class="player-actions"><button id="likeBtn">♡ Like</button><button id="saveBtn">＋ Save</button><button id="shareBtn">Share</button><button id="subscribeBtn">Subscribe</button></div><div class="comments"><h3>Comments</h3><div id="commentsList"></div><textarea id="commentInput" placeholder="Write a comment..."></textarea><button id="commentBtn">Comment</button></div></div></div>
+<div id="authPanel" class="overlay hidden"><div class="panel"><button id="closeAuth" class="close">×</button><h2 id="authTitle">Sign in</h2><input id="emailInput" type="email" placeholder="Email"><input id="passwordInput" type="password" placeholder="Password"><button id="authSubmit">Sign in</button><button id="authSwitch" data-signup="0">Create account</button><button id="signOutBtn" class="hidden">Sign out</button></div></div>
+<div id="searchPanel" class="overlay hidden"><div class="panel"><button id="closeSearch" class="close">×</button><h2>Search DIV TV</h2><input id="searchInput" placeholder="Search shows, episodes, categories..."><div id="searchResults"></div></div></div>
+<footer><p>DIV TV — Official DIVSTUDIO.CO LTD Animation & Entertainment Network</p></footer>
+<script src="app.js"></script>
+</body>
+</html>
